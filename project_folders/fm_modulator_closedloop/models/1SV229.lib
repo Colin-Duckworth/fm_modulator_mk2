@@ -1,0 +1,5 @@
+* Toshiba 1SV229 VHF/FM-band tuning varactor (SOD-323), approximate junction model.
+* Two-point fit to the listed specs: C(10 V) = 6.5 pF, C(2 V)/C(10 V) = 2.5  ->  C(2 V) = 16.25 pF
+* C(V) = CJO / (1 + V/VJ)^M with VJ = 0.7 V (assumed)  ->  M = 0.665, CJO = 39.9 pF
+* Check against the full C-V curve in the Toshiba datasheet before relying on absolute numbers.
+.model 1SV229 D(IS=1e-14 N=1 RS=0.2 CJO=39.9p VJ=0.7 M=0.665 BV=15 IBV=10u TT=0)
